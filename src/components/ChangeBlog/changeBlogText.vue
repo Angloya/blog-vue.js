@@ -8,29 +8,29 @@
         v-model.lazy="blogs.title"
         id="blogTitle"
         required/>
-         <div class="hello">
-    <picture-input
-      ref="pictureInput"
-      width="500"
-      height="500"
-      margin="16"
-      accept="image/jpeg,image/png"
-      :removable="true"
-      size="10"
-      button-class="btn"
-      :custom-strings="{
-        upload: '<h1>upload!</h1>',
-        drag: 'Drag a image'
-      }"
-      @remove="onRemoved"
-      @change="onChange">
-    </picture-input>
-  </div>
-      <label for="blogContent">Blog Content:</label>
-      <textarea
-        v-model.lazy="blogs.content"
-        id="blogContent">
-      </textarea>
+      <div class="hello">
+        <picture-input
+          ref="pictureInput"
+          width="500"
+          height="500"
+          margin="16"
+          accept="image/jpeg,image/png"
+          :removable="true"
+          size="10"
+          button-class="btn"
+          :custom-strings="{
+            upload: '<h1>upload!</h1>',
+            drag: 'Drag a image'
+          }"
+          @remove="onRemoved"
+          @change="onChange">
+        </picture-input>
+        </div>
+        <label for="blogContent">Blog Content:</label>
+        <textarea
+          v-model.lazy="blogs.content"
+          id="blogContent">
+        </textarea>
     </form>
   </div>
 </template>
@@ -95,35 +95,35 @@ export default {
 </script>
 
 <style scoped>
-#add-blog *{
+#add-blog * {
   box-sizing: border-box;
 }
-#add-blog{
+#add-blog {
   margin: 20px auto;
   max-width: 500px;
 }
-label{
+label {
   display: block;
   margin: 20px 0 10px;
 }
-input[type="text"], textarea{
+input[type="text"], textarea {
   display: block;
   width: 100%;
   padding: 8px;
 }
-#preview{
+#preview {
   padding: 10px 20px;
   border: 1px dotted #ccc;
   margin: 30px 0;
 }
-h3{
+h3 {
   margin-top: 10px;
 }
-#checkboxes input{
+#checkboxes input {
   display: inline-block;
   margin-right: 10px;
 }
-#checkboxes label{
+#checkboxes label {
   display: inline-block;
 }
 </style>

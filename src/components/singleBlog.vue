@@ -1,24 +1,24 @@
 <template>
 <div id="single-blog">
-        <img v-if='loading' class="loading" src="../assets/loader.gif">
-  <div v-if='!loading' id="single">
-    <h1>{{isTitle}}</h1>
-    <article>{{blog.content}}</article>
-    <div class="Image">
-    <img :src='blog.image' class="blogImage">
+    <img v-if='loading' class="loading" src="../assets/loader.gif">
+    <div v-if='!loading' id="single">
+        <h1>{{isTitle}}</h1>
+        <article>{{blog.content}}</article>
+        <div class="Image">
+            <img :src='blog.image' class="blogImage">
+        </div>
+        <div class="category">
+            <ul v-for="(category, index) in blog.categories" :key="index">
+                <li @click="categoryRouter(category)">{{category}}</li>
+            </ul>
+        </div>
+        <p>{{blog.author}}</p>
+        <p> Если вы являетесь автором данного блога, то вы можете отредактировать его
+            <img @click="changeBlog" class="changeblog" src="../assets/change.png">
+        </p>
+        <span v-if="showChange">Вы не являетесь автором данного блога</span>
     </div>
-      <div class="category">
-      <ul v-for="(category, index) in blog.categories" :key="index">
-      <li @click="categoryRouter(category)">{{category}}</li>
-      </ul>
-      </div>
-      <p>{{blog.author}}</p>
-      <p> Если вы являетесь автором данного блога, то вы можете отредактировать его
-        <img @click="changeBlog" class="changeblog" src="../assets/change.png">
-      </p>
-      <span v-if="showChange">Вы не являетесь автором данного блога</span>
-      </div>
-  </div>
+</div>
 </template>
 
 <script>
@@ -90,12 +90,12 @@ export default {
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-direction: column
+  flex-direction: column;
 }
 .blogImage {
-max-width: 800px;
-max-height: 800px;
-padding-bottom: 30px;
+  max-width: 800px;
+  max-height: 800px;
+  padding-bottom: 30px;
 }
 p {
   align-self: flex-end
@@ -109,5 +109,32 @@ article {
 }
 .changeblog {
   margin-bottom: -5px
+}
+@media only screen and (max-width: 600px) {
+  #single-blog{
+    max-width: 100%;
+    margin: 0 auto;
+    height: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid black;
+    padding: 20px;
+    background-color: rgba(247, 238, 238, 0.9);
+    margin-top: -40px;
+  }
+  #single{
+    display: flex;
+    max-width: 100%;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  .blogImage {
+    max-width: 300px;
+    max-height: 300px;
+    padding-bottom: 30px;
+  }
 }
 </style>

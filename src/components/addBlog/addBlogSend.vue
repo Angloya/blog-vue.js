@@ -34,8 +34,7 @@ export default {
   margin-right: 10px;
 }
 #addBlogSend button:hover {
-   transition: .5s linear;
-   background-color: rgba(255, 250, 249, 0.8)
+  transition: .5s linear;
+  background-color: rgba(255, 250, 249, 0.8)
 }
-
  </style>

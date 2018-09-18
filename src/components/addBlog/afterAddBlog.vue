@@ -1,9 +1,9 @@
- <template>
-<div class="submitted">
-      <h1>{{message}}</h1>
-      <button @click="newPost">Add new post</button>
-      <img src='../../assets/afterSend.png'>
-    </div>
+<template>
+  <div class="submitted">
+    <h1>{{message}}</h1>
+    <button @click="newPost">Add new post</button>
+    <img src='../../assets/afterSend.png'>
+  </div>
 </template>
 
 <script>
@@ -39,8 +39,24 @@ button {
   width: 170px;
 }
  button:hover {
-   transition: .5s linear;
-   background-color: rgba(255, 250, 249, 0.8)
+  transition: .5s linear;
+  background-color: rgba(255, 250, 249, 0.8)
 }
-
+@media only screen and (max-width: 600px) {
+  button {
+    padding: 10px;
+    outline: none;
+    font-size: 25px;
+    border-radius: 8px;
+    background-color: rgba(255, 198, 190, 0.4);
+    margin-right: 10px;
+    padding-bottom: 40px;
+    height: 60px;
+    width: 200px;
+  }
+  img {
+    width: 300px;
+    height: 300px;
+  }
+}
 </style>

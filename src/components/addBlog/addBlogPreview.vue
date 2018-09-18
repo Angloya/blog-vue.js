@@ -38,7 +38,7 @@ export default {
   max-height: 500px;
   max-width: 500px;
 }
-#preview{
+#preview {
   padding: 10px 20px;
   border: 1px dotted #ccc;
   margin: 30px 0;
@@ -48,7 +48,7 @@ export default {
   min-width: 300px;
   padding-right: 5%
 }
-.previewh1{
+.previewh1 {
   border: 1px solid black;
   padding: 10px;
 }
@@ -63,8 +63,8 @@ p {
   font-size: 22px
 }
 .blog_image {
-display: block;
-margin: 0 auto;
+  display: block;
+  margin: 0 auto;
 }
 .blog_category {
   display: flex;
@@ -79,5 +79,26 @@ margin: 0 auto;
 }
 .blog_author {
   text-align:right
+}
+@media only screen and (max-width: 600px) {
+  .blog_image {
+    max-height: 300px;
+    max-width: 300px;
+  }
+  #preview {
+    padding: 10px 20px;
+    border: 1px dotted #ccc;
+    margin: 30px 0;
+    background-color: rgba(237, 243, 243, 0.8)
+  }
+  p {
+    text-align: justify;
+    font-size: 18px
+  }
+  #previewBlog {
+    width: 100%;
+    min-width: 300px;
+    padding-right: 5%
+  }
 }
 </style>

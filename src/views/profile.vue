@@ -1,7 +1,7 @@
 <template>
-<div id="profile">
-<Profile/>
-</div>
+  <div id="profile">
+    <Profile/>
+  </div>
 </template>
 
 <script>

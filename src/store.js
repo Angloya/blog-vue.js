@@ -11,7 +11,8 @@ export default new Vuex.Store({
     blogs: [],
     user: null,
     loading: false,
-    error: null
+    error: null,
+    row: false
   },
   mutations: {
     setUser (state, payload) {
@@ -19,6 +20,9 @@ export default new Vuex.Store({
     },
     blog (state, blog) {
       state.blog = blog
+    },
+    row (state, row) {
+      state.row = row
     },
     blogs (state, blogs) {
       state.blogs = blogs
@@ -89,6 +93,12 @@ export default new Vuex.Store({
         context.commit('submitted', false)
         context.commit('setLoading', false)
       })
+    },
+    isRow (context) {
+      context.commit('row', true)
+    },
+    isColumn (context) {
+      context.commit('row', false)
     },
     showSingleBlog (context, id) {
       context.commit('setLoading', true)

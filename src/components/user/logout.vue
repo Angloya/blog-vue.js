@@ -1,6 +1,6 @@
 <template>
   <div class="logout">
-  <img src='../../assets/logout.png' alt="logout" id="logout" @click="logout">
+    <img src='../../assets/logout.png' alt="logout" id="logout" @click="logout">
   </div>
 </template>
 
@@ -22,9 +22,9 @@ export default {
 
 <style scoped>
 img {
- width: 30px;
- height: 30px;
- margin-bottom: -8px;
-cursor: pointer
+  width: 30px;
+  height: 30px;
+  margin-bottom: -8px;
+  cursor: pointer
 }
 </style>

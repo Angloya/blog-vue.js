@@ -1,8 +1,8 @@
 <template>
-<div class="loginWithGoogle">
-  <button @click.prevent="onSigninGoogle" class="google">Login with
-    <img src="../../assets/google.png">oogle
-  </button>
+  <div class="loginWithGoogle">
+    <button @click.prevent="onSigninGoogle" class="google">Login with
+      <img src="../../assets/google.png">oogle
+    </button>
   </div>
 </template>
 
@@ -37,7 +37,7 @@ export default {
 
 <style scoped>
 .google {
-    display: flex;
+  display: flex;
   align-items: center;
   margin-top: 20px;
 }

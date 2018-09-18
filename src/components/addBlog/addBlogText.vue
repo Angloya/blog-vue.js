@@ -8,24 +8,24 @@
         v-model.lazy="title"
         id="blogTitle"
         required/>
-         <div class="hello">
-    <picture-input
-      ref="pictureInput"
-      width="500"
-      height="500"
-      margin="16"
-      accept="image/jpeg,image/png"
-      :removable="true"
-      size="10"
-      button-class="btn"
-      :custom-strings="{
-        upload: '<h1>upload!</h1>',
-        drag: 'Drag a image'
-      }"
-      @remove="onRemoved"
-      @change="onChange">
-    </picture-input>
-  </div>
+      <div class="hello">
+        <picture-input
+          ref="pictureInput"
+          width="500"
+          height="500"
+          margin="16"
+          accept="image/jpeg,image/png"
+          :removable="true"
+          size="10"
+          button-class="btn"
+          :custom-strings="{
+            upload: '<h1>upload!</h1>',
+            drag: 'Drag a image'
+          }"
+          @remove="onRemoved"
+          @change="onChange">
+        </picture-input>
+      </div>
       <label for="blogContent">Blog Content:</label>
       <textarea
         v-model.lazy="blog.content"
@@ -34,7 +34,7 @@
       <div id="checkboxes" v-for="(category, index) in blog.categories" :key="index">
         <label>{{category}}</label>
         <input type="checkbox"
-           :value='category'
+          :value='category'
           v-model="blog.categories"/>
       </div>
       <button v-if='!addCat' @click="addCat = !addCat">add categoties</button>
@@ -108,7 +108,7 @@ export default {
 </script>
 
 <style>
-#add-blog *{
+#add-blog * {
   box-sizing: border-box;
 }
 .add-blog button {
@@ -120,14 +120,14 @@ export default {
   margin-right: 10px;
 }
 .add-blog button:hover {
-   transition: .5s linear;
-   background-color: rgba(255, 250, 249, 0.8)
+  transition: .5s linear;
+  background-color: rgba(255, 250, 249, 0.8)
 }
-#add-blog{
+#add-blog {
   margin: 20px auto;
   max-width: 500px;
 }
-label{
+label {
   display: block;
   margin: 20px 0 10px;
   font-size: 25px;
@@ -135,7 +135,7 @@ label{
 textarea {
   min-height: 200px;;
 }
-input[type="text"], textarea{
+input[type="text"], textarea {
   display: block;
   width: 100%;
   padding: 10px;
@@ -145,21 +145,21 @@ input[type="text"], textarea{
   background-color: rgba(255, 198, 190, 0.4)
 }
 textarea::-webkit-scrollbar {
-    width: 3px;
-    background: #000000;
+  width: 3px;
+  background: #000000;
 }
 textarea::-webkit-scrollbar-thumb:vertical {
-    width: 3px;
-    background: #ffffff;
+  width: 3px;
+  background: #ffffff;
 }
 textarea::-webkit-scrollbar-thumb:horizontal  {
-   display: none;
-    background: #ffffff;
+  display: none;
+  background: #ffffff;
 }
 textarea::-webkit-scrollbar:horizontal {
-    width: 0px;
-    display: none;
-    background: #000000;
+  width: 0px;
+  display: none;
+  background: #000000;
 }
 #checkboxes input{
   display: inline-block;
@@ -168,5 +168,27 @@ textarea::-webkit-scrollbar:horizontal {
 #checkboxes label{
   display: inline-block;
   margin-right: -90px;
+}
+@media only screen and (max-width: 600px) {
+  #add-blog {
+    margin: 20px auto;
+    width: 100%;
+  }
+  textarea {
+    min-height: 200px;
+  }
+  input[type="text"], textarea {
+    display: block;
+    width: 250px;
+    padding: 10px;
+    margin-bottom: 20px;
+    font-size: 18px;
+    font-family: 'Open Sans Condensed', sans-serif;
+    background-color: rgba(255, 198, 190, 0.4)
+  }
+  #checkboxes label {
+    display: inline-block;
+    margin-right: -30px;
+  }
 }
 </style>

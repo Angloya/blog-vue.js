@@ -1,18 +1,17 @@
 <template>
   <div class="profile">
-      <h2>Hello</h2>
-      <h1>{{ user.name }}</h1>
-      <h2 ><b>Email :</b> {{ user.email }}</h2>
-  <form @submit.prevent="updateProfile">
+    <h2>Hello</h2>
+    <h1>{{ user.name }}</h1>
+    <h2><b>Email :</b> {{ user.email }}</h2>
+    <form @submit.prevent="updateProfile">
       <h2>Update Profile</h2>
       <input v-model="displayName" placeholder="Your name">
       <button>Update</button>
     </form>
     <router-link :to="'myPosts/'">
-        <button class="myPosts">my posts</button>
+      <button class="myPosts">my posts</button>
     </router-link>
   </div>
-
 </template>
 
 <script>
@@ -66,5 +65,12 @@ form {
 .myPosts {
   font-size: 30px;
   padding: 10px 20px;
+}
+@media only screen and (max-width: 600px) {
+  .profile {
+    height: 100vh;
+    margin-top: -40px;
+    background-color: rgba(237, 243, 243, 0.7)
+  }
 }
 </style>

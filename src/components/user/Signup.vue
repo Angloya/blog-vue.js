@@ -18,15 +18,15 @@
       placeholder="Enter password"
       required>
       <input
-  name="confirmPassword"
-  label="Confirm Password"
-  placeholder="Confirm Password"
-  id="confirmPassword"
-  v-model="confirmPassword"
-  type="password"
-  :rules="[comparePasswords]">
+        name="confirmPassword"
+        label="Confirm Password"
+        placeholder="Confirm Password"
+        id="confirmPassword"
+        v-model="confirmPassword"
+        type="password"
+        :rules="[comparePasswords]">
       <button>Регистрация</button>
-  </form>
+    </form>
   </div>
 </template>
 

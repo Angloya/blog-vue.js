@@ -2,20 +2,20 @@
 <div>
     <img v-if='loading' src="../assets/loader.gif">
     <div v-if='!loading'>
-    <div v-if='!submitted' class="addBlog">
-      <div class="blogEdit">
-        <div>
-    <changeBlogText id="addBlogText"/>
-    </div>
-    <div>
-<addBlogPreview id="addBlogPreview"/>
-    </div>
-      </div>
-    <changeSend id="addBlogSend"/>
-    </div>
-    <div v-if="submitted" class="afterAddBlog">
- <afterAddBlog message="Thank you for editing your post"/>
-    </div>
+        <div v-if='!submitted' class="addBlog">
+            <div class="blogEdit">
+                <div>
+                    <changeBlogText id="addBlogText" />
+                </div>
+                <div>
+                    <addBlogPreview id="addBlogPreview" />
+                </div>
+            </div>
+            <changeSend id="addBlogSend" />
+        </div>
+        <div v-if="submitted" class="afterAddBlog">
+            <afterAddBlog message="Thank you for editing your post" />
+        </div>
     </div>
 </div>
 </template>
@@ -46,7 +46,7 @@ export default {
 </script>
 
 <style scoped>
-  .addBlog {
+.addBlog {
   height: 100%;
   padding-bottom: 5px;
   background-image: url('../assets/background3.jpg');
@@ -55,19 +55,37 @@ export default {
   background-repeat: no-repeat;
   background-attachment: fixed;
   margin-top: -40px;
+}
+.blogEdit {
+  display: flex;
+  justify-content:space-around;
+  align-items: flex-start ;
+}
+#addBlogText{
+  width: 500px;
+  padding-left: 150px;
+}
+#addBlogPreview{
+  padding-right: 150px;
+  width: 600px;
+  padding-left: 0px;
+}
+@media only screen and (max-width: 600px) {
+.blogEdit {
+  display: flex;
+  align-items: center ;
+  flex-direction: column
+}
+#addBlogText{
+  width: 100%;
+  padding-left: 0px;
+}
+#addBlogPreview{
+  width: 300px;
+  padding-right: 0px;
+}
+#addBlogSend {
+  text-align: center;
   }
-  .blogEdit {
-    display: flex;
-    justify-content:space-around;
-    align-items: flex-start ;
-  }
- #addBlogText{
-    width: 500px;
-    padding-left: 150px;
-  }
-  #addBlogPreview{
-    padding-right: 150px;
-    width: 600px;
-  }
-
+}
 </style>

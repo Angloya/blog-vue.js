@@ -1,25 +1,25 @@
 <template>
-<div class="onSignin">
-  <form @submit.prevent="onSignin">
-    <h2>Вход:</h2>
-    <input
-      name="email"
-      label="Email"
-      v-model="email"
-      type="email"
-      placeholder="Your email"
-      required>
-    <input
-      name="password"
-      label="Password"
-      v-model="password"
-      type="password"
-      placeholder="Your password"
-      required>
+  <div class="onSignin">
+    <form @submit.prevent="onSignin">
+      <h2>Вход:</h2>
+      <input
+        name="email"
+        label="Email"
+        v-model="email"
+        type="email"
+        placeholder="Your email"
+        required>
+      <input
+        name="password"
+        label="Password"
+        v-model="password"
+        type="password"
+        placeholder="Your password"
+        required>
       <button>Вход</button>
-  </form>
-  <p>Forgot password? enter your email and reset your password!</p>
-  <button class="" @click.prevent="onResetPassword">Reset</button>
+    </form>
+    <p>Forgot password? enter your email and reset your password!</p>
+    <button class="" @click.prevent="onResetPassword">Reset</button>
   </div>
 </template>
 
