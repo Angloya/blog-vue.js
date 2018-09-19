@@ -4,7 +4,7 @@
       <li><router-link to="/home" exact>Home</router-link></li>
       <li><router-link  to="/blog" exact>Blog</router-link></li>
       <li><router-link to="/add" exact>Add a New Blog</router-link></li>
-      <li><router-link to="/Profile" exact>profile</router-link></li>
+      <li><router-link to="/Profile" exact>Profile</router-link></li>
       <li class="logout"><logout/></li>
       <li class="userMail">{{user.email}}</li>
       <img src="../../assets/row.png" @click="isColumn" v-if="this.row">
